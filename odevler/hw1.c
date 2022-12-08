@@ -26,7 +26,17 @@ int main() {
 // verilen iki sayinin en buyuk ortak bolenini hesaplar
 int ebob1(int num1, int num2) {
     // kodunuzu buraya yazin
-    return 0;
+    int ebob(int num1, int num2) {
+  if (num1 < 0) num1 = -num1;
+  if (num2 < 0) num2 = -num2;
+
+  int i;
+  for (i = num1 < num2 ? num1 : num2; i >= 1; i--) {
+    if (num1 % i == 0 && num2 % i == 0) break;
+  }
+
+  
+  return i;
 }
 
 // verilen dizideki sayilarin en buyuk ortak bolenini hesaplar
